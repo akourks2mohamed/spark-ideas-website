@@ -1,0 +1,82 @@
+/* تنسيقات عامة للجسم */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* لون خلفية فاتح */
+    color: #333;
+    line-height: 1.6;
+    direction: rtl; /* لجعل النص يبدأ من اليمين لكون اللغة عربية */
+    text-align: right; /* محاذاة النص لليمين */
+}
+
+/* تنسيقات الرأس (Header) */
+header {
+    background-color: #2c3e50; /* لون أزرق داكن */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* تنسيقات المحتوى الرئيسي (Main) */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    color: #34495e;
+    border-bottom: 2px solid #e74c3c; /* خط أحمر تحت العناوين */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* تنسيقات الأزرار */
+.button {
+    display: inline-block;
+    background-color: #e74c3c; /* لون أحمر */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #c0392b; /* لون أحمر أغمق عند التمرير */
+}
+
+/* تنسيقات التذييل (Footer) */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: #fff;
+    font-size: 0.9em;
+    margin-top: 30px;
+}

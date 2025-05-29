@@ -3,43 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شرارة الأفكار - Spark Ideas</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/blog.css">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <meta name="description" content="موقع شرارة الأفكار - منصة إبداعية تهدف إلى إلهام العقول وتنمية المهارات">
+    <title>الرئيسية - شرارة الأفكار</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo">شرارة الأفكار</a>
-            <ul class="nav-links">
-                <li><a href="index.html">الرئيسية</a></li>
-                <li><a href="blog/blog.html">مختبر الأفكار</a></li>
-                <li><a href="about.html">حول الموقع</a></li>
-                <li><a href="contact.html">اتصل بنا</a></li>
-            </ul>
+            <a href="index.html" class="active">الرئيسية</a>
+            <a href="about.html">حول الموقع</a>
+            <a href="contact.html">اتصل بنا</a>
         </nav>
     </header>
 
-    <main>
+    <main class="container">
         <section class="hero">
-            <h1>مرحباً بك في شرارة الأفكار!</h1>
-            <p class="tagline">هنا تشتعل شعلة الإبداع. اكتشف أفكاراً جديدة وتعلم معنا.</p>
+            <h1>مرحباً بكم في شرارة الأفكار</h1>
+            <p class="tagline">منصة إبداعية تهدف إلى إلهام العقول وتنمية المهارات</p>
+            <a href="about.html" class="btn">تعرف علينا</a>
         </section>
 
-        <section class="blog-preview">
-            <h2>أحدث المقالات في مختبر الأفكار</h2>
-            <div id="latest-posts" class="posts-grid">
-                <p>جاري تحميل أحدث الشرارات...</p>
+        <section class="features">
+            <h2>لماذا تختارنا؟</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>أفكار إبداعية</h3>
+                    <p>نقدم محتوى فريداً ومبتكراً لتحفيز الإبداع والابتكار</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>تعلم مستمر</h3>
+                    <p>دورات ومواد تعليمية لتطوير مهاراتك في مختلف المجالات</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-users"></i>
+                    <h3>مجتمع تفاعلي</h3>
+                    <p>انضم إلى مجتمع من المبدعين وتبادل الخبرات والأفكار</p>
+                </div>
             </div>
-            <a href="blog/blog.html" class="button">تصفح جميع المقالات »</a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 شرارة الأفكار. جميع الحقوق محفوظة.</p>
+        <p>&copy; <span id="current-year">2025</span> شرارة الأفكار. جميع الحقوق محفوظة.</p>
     </footer>
 
-    <script src="js/blog.js"></script>
+    <a href="#" id="back-to-top" title="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

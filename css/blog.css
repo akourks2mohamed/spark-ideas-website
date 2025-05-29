@@ -1,0 +1,281 @@
+/* أنماط عامة للمدونة */
+:root {
+    --primary-color: #3a86ff;
+    --secondary-color: #8338ec;
+    --accent-color: #ff006e;
+    --text-color: #2b2d42;
+    --light-text: #8d99ae;
+    --bg-color: #ffffff;
+    --card-bg: #f8f9fa;
+    --border-color: #e9ecef;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* الوضع المظلم */
+.dark-mode {
+    --text-color: #f8f9fa;
+    --light-text: #adb5bd;
+    --bg-color: #1a1a2e;
+    --card-bg: #16213e;
+    --border-color: #2a2a4a;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* تنسيقات قسم المدونة */
+.blog-header {
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.blog-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.blog-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* تنسيقات شبكة المقالات */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.post-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.post-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-card-content {
+    padding: 1.5rem;
+}
+
+.post-card h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+.post-card p {
+    color: var(--light-text);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--light-text);
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+.post-tag {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* تنسيقات صفحة المقال المفرد */
+.post-template .post-header {
+    margin-bottom: 2rem;
+}
+
+.post-template .post-title {
+    font-size: 2.2rem;
+    margin: 1.5rem 0;
+    line-height: 1.3;
+    color: var(--text-color);
+}
+
+.post-template .featured-image-container {
+    margin: 2rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.post-template .featured-image-container img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.post-body {
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.post-body h2,
+.post-body h3,
+.post-body h4 {
+    margin: 2rem 0 1rem;
+    color: var(--primary-color);
+}
+
+.post-body p {
+    margin-bottom: 1.5rem;
+}
+
+.post-body a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-bottom: 1px dashed currentColor;
+    transition: var(--transition);
+}
+
+.post-body a:hover {
+    color: var(--accent-color);
+    border-bottom-style: solid;
+}
+
+/* تنسيقات الشريط الجانبي */
+.post-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+@media (max-width: 992px) {
+    .post-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .post-sidebar {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+}
+
+.sidebar-widget {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+.widget-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.widget-title i {
+    margin-left: 0.5rem;
+}
+
+/* تنسيقات الكاتب */
+.author-box {
+    display: flex;
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 3rem 0;
+    gap: 2rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+.author-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.author-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+}
+
+.author-info h3 a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.author-bio {
+    color: var(--light-text);
+    margin: 0.5rem 0 1rem;
+    line-height: 1.6;
+}
+
+.author-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.author-social a {
+    color: var(--light-text);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.author-social a:hover {
+    color: var(--primary-color);
+}
+
+/* التجاوب مع الأجهزة المحمولة */
+@media (max-width: 768px) {
+    .blog-header h1 {
+        font-size: 2rem;
+    }
+    
+    .post-template .post-title {
+        font-size: 1.8rem;
+    }
+    
+    .author-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .author-avatar {
+        margin: 0 auto;
+    }
+    
+    .author-social {
+        justify-content: center;
+    }
+}

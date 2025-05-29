@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" id="post-description" content="اكتشف هذا المقال المميز على مدونة شرارة الأفكار">
+    <title id="post-title">عنوان المقال - شرارة الأفكار</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js"></script>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sparkideas.com/blog/post-slug">
+    <meta property="og:title" content="عنوان المقال - شرارة الأفكار">
+    <meta property="og:description" content="وصف مختصر للمقال">
+    <meta property="og:image" content="https://sparkideas.com/images/featured-image.jpg">
+    <meta property="og:site_name" content="شرارة الأفكار">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://sparkideas.com/blog/post-slug">
+    <meta name="twitter:title" content="عنوان المقال - شرارة الأفكار">
+    <meta name="twitter:description" content="وصف مختصر للمقال">
+    <meta name="twitter:image" content="https://sparkideas.com/images/featured-image.jpg">
+    <meta name="twitter:site" content="@sparkideas">
+    <meta name="twitter:creator" content="@sparkideas">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "عنوان المقال",
+        "description": "وصف مختصر للمقال",
+        "author": {
+            "@type": "Person",
+            "name": "اسم الكاتب",
+            "url": "https://sparkideas.com/authors/author-name"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "شرارة الأفكار",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://sparkideas.com/logo.png"
+            }
+        },
+        "datePublished": "2023-05-15T00:00:00+03:00",
+        "dateModified": "2023-05-15T00:00:00+03:00",
+        "image": "https://sparkideas.com/images/featured-image.jpg",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://sparkideas.com/blog/post-slug"
+        }
+    }
+    </script>
+</head>
+<body class="post-template">
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">شرارة الأفكار</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="blog.html" class="active">مختبر الأفكار</a></li>
+                <li><a href="../about.html">حول الموقع</a></li>
+                <li><a href="../contact.html">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb" aria-label="خريطة الموقع">
+            <ol>
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="blog.html">المدونة</a></li>
+                <li aria-current="page">عنوان المقال</li>
+            </ol>
+        </nav>
+        
+        <div class="post-layout">
+            <article class="post-content" itemscope itemtype="http://schema.org/BlogPosting">
+                <div class="featured-image-container" id="featured-image">
+                </div>
+
+                <header class="post-header">
+                    <h1 class="post-title" id="article-title" itemprop="headline">
+                        <span class="title-highlight"></span>
+                    </h1>
+                    
+                    <div class="post-meta" id="article-meta">
+                        <div class="post-share">
+                            <span class="share-label">مشاركة:</span>
+                            <div class="share-buttons">
+                                <a href="#" class="share-btn twitter" aria-label="مشاركة على تويتر" data-platform="twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="share-btn facebook" aria-label="مشاركة على فيسبوك" data-platform="facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="share-btn linkedin" aria-label="مشاركة على لينكد إن" data-platform="linkedin">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="share-btn whatsapp" aria-label="مشاركة على واتساب" data-platform="whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <button class="share-btn more" aria-label="مشاركة عبر المزيد" id="more-share-options">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
+                            <div class="share-dropdown" id="share-dropdown">
+                                <a href="#" class="share-option" data-platform="telegram">
+                                    <i class="fab fa-telegram-plane"></i>
+                                    <span>تيليجرام</span>
+                                </a>
+                                <a href="#" class="share-option" data-platform="email">
+                                    <i class="far fa-envelope"></i>
+                                    <span>البريد الإلكتروني</span>
+                                </a>
+                                <button class="share-option copy-link" id="copy-link-btn" data-clipboard-text="https://example.com/blog/post-title">
+                                    <i class="fas fa-link"></i>
+                                    <span>نسخ الرابط</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="table-of-contents-wrapper" id="toc-wrapper" style="display: none;">
+                        <div class="toc-header">
+                            <h3 class="toc-title">
+                                <i class="fas fa-list-ul"></i>
+                                <span>محتويات المقال</span>
+                            </h3>
+                            <button class="toc-toggle" id="toc-toggle" aria-expanded="false" aria-controls="table-of-contents">
+                                <span class="sr-only">إظهار/إخفاء المحتويات</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <nav class="table-of-contents" id="table-of-contents" aria-label="جدول المحتويات">
+                            <ul class="toc-list">
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+                
+                <div class="post-body" id="article-body" itemprop="articleBody">
+                    <div class="loading-content">
+                        <div class="skeleton-line" style="width: 100%; height: 2.5rem; margin-bottom: 1.5rem;"></div>
+                        <div class="skeleton-line" style="width: 80%; height: 1.5rem; margin-bottom: 1rem;"></div>
+                        <div class="skeleton-line" style="width: 90%; height: 1.5rem; margin-bottom: 1rem;"></div>
+                        <div class="skeleton-line" style="width: 85%; height: 1.5rem; margin-bottom: 2rem;"></div>
+                        <div class="skeleton-line" style="width: 95%; height: 1.5rem; margin-bottom: 1rem;"></div>
+                        <div class="skeleton-line" style="width: 75%; height: 1.5rem; margin-bottom: 1rem;"></div>
+                    </div>
+                    
+                    <div class="post-content-inner">
+                    </div>
+                </div>
+            
+                <footer class="post-footer">
+                    <div class="post-tags" id="post-tags">
+                    </div>
+                    <div class="post-share">
+                        <span>شارك المقال:</span>
+                        <a href="#" class="share-btn" data-platform="twitter" aria-label="مشاركة على تويتر">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="share-btn" data-platform="facebook" aria-label="مشاركة على فيسبوك">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="share-btn" data-platform="linkedin" aria-label="مشاركة على لينكد إن">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="share-btn" data-platform="whatsapp" aria-label="مشاركة على واتساب">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </footer>
+                
+                <div class="comments-section" style="display: none;">
+                    <h3 class="section-title">
+                        <i class="far fa-comments"></i>
+                        التعليقات <span class="comments-count">(0)</span>
+                    </h3>
+                    <div class="comments-disabled-note">
+                        <p>التعليقات معطلة حاليًا. نعتذر عن هذا الإزعاج.</p>
+                    </div>
+                </div>
+                
+                <div class="post-navigation">
+                    <a href="#" id="prev-post" class="nav-previous disabled">
+                        <span class="nav-direction">المقال السابق</span>
+                        <h4 class="nav-title"></h4>
+                        <span class="nav-arrow"><i class="fas fa-arrow-left"></i></span>
+                    </a>
+                    <a href="blog.html" class="back-to-blog">
+                        <i class="fas fa-th-large"></i>
+                        <span>عرض جميع المقالات</span>
+                    </a>
+                    <a href="#" id="next-post" class="nav-next disabled">
+                        <span class="nav-arrow"><i class="fas fa-arrow-right"></i></span>
+                        <h4 class="nav-title"></h4>
+                        <span class="nav-direction">المقال التالي</span>
+                    </a>
+                </div>
+                
+                <div class="author-box">
+                    <div class="author-avatar">
+                        <img src="../assets/images/authors/default.jpg" alt="صورة الكاتب" id="author-avatar">
+                    </div>
+                    <div class="author-info">
+                        <h3 class="author-name">
+                            <a href="#" id="author-link">فريق شرارة الأفكار</a>
+                        </h3>
+                        <p class="author-bio" id="author-bio">
+                            فريق مكون من خبراء ومتخصصين في مجال البرمجة وتطوير الويب، نسعى لنشر المعرفة وتسهيل تعلم البرمجة للجميع.
+                        </p>
+                        <div class="author-social" id="author-social">
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
+            <aside class="post-sidebar">
+                <div class="sidebar-widget author-widget">
+                    <div class="widget-title">
+                        <i class="fas fa-user-edit"></i>
+                        <h3>عن الكاتب</h3>
+                    </div>
+                    <div class="author-sidebar">
+                        <div class="author-avatar">
+                            <img src="../assets/images/authors/default.jpg" alt="صورة الكاتب">
+                        </div>
+                        <h4 class="author-name">فريق شرارة الأفكار</h4>
+                        <p class="author-bio">
+                            فريق مكون من خبراء ومتخصصين في مجال البرمجة وتطوير الويب، نسعى لنشر المعرفة وتسهيل تعلم البرمجة للجميع.
+                        </p>
+                        <a href="../about.html" class="author-link">المزيد عنا <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                
+                <div class="sidebar-widget recent-posts">
+                    <div class="widget-title">
+                        <i class="far fa-newspaper"></i>
+                        <h3>أحدث المقالات</h3>
+                    </div>
+                    <div class="recent-posts-list" id="recent-posts">
+                        <div class="recent-post-item loading">
+                            <div class="post-thumbnail"></div>
+                            <div class="post-info">
+                                <h4 class="post-title">جاري التحميل...</h4>
+                                <span class="post-date">--/--/----</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sidebar-widget categories-widget">
+                    <div class="widget-title">
+                        <i class="fas fa-folder-open"></i>
+                        <h3>التصنيفات</h3>
+                    </div>
+                    <ul class="categories-list" id="categories-list">
+                        <li><a href="#">جاري التحميل...</a></li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-widget tags-widget">
+                    <div class="widget-title">
+                        <i class="fas fa-tags"></i>
+                        <h3>الوسوم الشائعة</h3>
+                    </div>
+                    <div class="tags-cloud" id="popular-tags">
+                        <a href="#" class="tag">جاري التحميل</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year">2025</span> شرارة الأفكار. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <div class="floating-buttons">
+        <button id="theme-toggle" class="floating-button" aria-label="تبديل الوضع المظلم">
+            <i class="fas fa-moon"></i>
+        </button>
+        <a href="#" id="back-to-top" class="floating-button" aria-label="العودة للأعلى">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/blog.js"></script>
+</body>
+</html>

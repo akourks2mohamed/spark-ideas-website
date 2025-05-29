@@ -14,28 +14,31 @@ if (currentYearSpan) {
 // تبديل الوضع المظلم
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
-    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-}
-
-// تهيئة الوضع المظفحسب التفضيلات المحفوظة
-if (localStorage.getItem('darkMode') === 'true') {
-    document.body.classList.add('dark-mode');
-}
-
-// إضافة زر تبديل الوضع المظلم إذا لم يكن موجوداً
-if (!themeToggle) {
-    const header = document.querySelector('header');
-    if (header) {
-        const themeToggleBtn = document.createElement('button');
-        themeToggleBtn.id = 'theme-toggle';
-        themeToggleBtn.className = 'theme-toggle';
-        themeToggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
-        themeToggleBtn.onclick = toggleDarkMode;
-        header.insertBefore(themeToggleBtn, header.firstChild);
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isDarkMode);
+    if (themeToggle) {
+        themeToggle.querySelector('i').className = isDarkMode ? 'fas fa-sun' : 'fas fa-moon';
     }
-} else {
-    themeToggle.onclick = toggleDarkMode;
 }
+
+// تهيئة الوضع المظلم حسب التفضيلات المحفوظة عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', function() {
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+        if (themeToggle) {
+            themeToggle.querySelector('i').className = 'fas fa-sun';
+        }
+    } else {
+        if (themeToggle) {
+            themeToggle.querySelector('i').className = 'fas fa-moon';
+        }
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleDarkMode);
+    }
+});
+
 
 // زر العودة للأعلى
 window.onscroll = function() {
@@ -55,39 +58,17 @@ if (backToTopBtn) {
     });
 }
 
-// معالجة نموذج الاتصال
+// معالجة نموذج الاتصال (في صفحة contact.html)
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // الحصول على قيم الحقول
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
         
-        // هنا يمكنك إضافة كود إرسال النموذج إلى الخادم
-        // في هذا المثال، سنقوم فقط بعرض رسالة تأكيد
         alert(`شكراً لك ${name}، تم استلام رسالتك بنجاح! سوف نتواصل معك قريباً على ${email}`);
         
-        // إعادة تعيين النموذج
         contactForm.reset();
-    });
-}
-
-// تحديث أيقونة الوضع المظلم عند التبديل
-document.addEventListener('DOMContentLoaded', function() {
-    const themeIcon = document.querySelector('.theme-toggle i');
-    if (themeIcon) {
-        themeIcon.className = document.body.classList.contains('dark-mode') ? 'fas fa-sun' : 'fas fa-moon';
-    }
-});
-
-// تحديث أيقونة الوضع المظلم عند النقر
-if (themeToggle) {
-    themeToggle.addEventListener('click', function() {
-        const themeIcon = this.querySelector('i');
-        if (themeIcon) {
-            themeIcon.className = document.body.classList.contains('dark-mode') ? 'fas fa-sun' : 'fas fa-moon';
-        }
     });
 }

@@ -10,9 +10,13 @@
 <body>
     <header>
         <nav>
-            <a href="index.html">الرئيسية</a>
-            <a href="about.html" class="active">حول الموقع</a>
-            <a href="contact.html">اتصل بنا</a>
+            <a href="index.html" class="logo">شرارة الأفكار</a>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="blog/blog.html">مختبر الأفكار</a></li>
+                <li><a href="about.html" class="active">حول الموقع</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -34,8 +38,7 @@
                 </ul>
             </div>
             <div class="about-image">
-                <img src="images/logo.png" alt="شعار شرارة الأفكار">
-            </div>
+                <img src="images/logo.png" alt="شعار شرارة الأفكار"> </div>
         </section>
     </main>
 
@@ -43,6 +46,9 @@
         <p>&copy; <span id="current-year">2025</span> شرارة الأفكار. جميع الحقوق محفوظة.</p>
     </footer>
 
+    <button id="theme-toggle" class="theme-toggle" aria-label="تبديل الوضع المظلم">
+        <i class="fas fa-moon"></i>
+    </button>
     <a href="#" id="back-to-top" title="العودة للأعلى">
         <i class="fas fa-arrow-up"></i>
     </a>

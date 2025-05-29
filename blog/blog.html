@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مدونة شرارة الأفكار - اكتشف مقالات تقنية ودروس برمجية مميزة">
+    <title>مختبر الأفكار | شرارة الأفكار</title>
+    
+    <!-- الخطوط -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    
+    <!-- الأنماط -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    
+    <!-- مكتبات خارجية -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">
+                <i class="fas fa-spark" style="color: #f39c12; margin-left: 8px;"></i>
+                شرارة الأفكار
+            </a>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="blog.html" class="active">المدونة</a></li>
+                <li><a href="../about.html">من نحن</a></li>
+                <li><a href="../contact.html">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog-header">
+            <h1>مختبر الأفكار</h1>
+            <p>اكتشف شرارات الإبداع والدروس التقنية التي نشاركها معك</p>
+        </section>
+
+        <section class="blog-content">
+            <div class="container">
+                <h2 class="section-title">أحدث المقالات</h2>
+                <div id="posts-container" class="posts-grid">
+                    <!-- سيتم تحميل المقالات هنا بواسطة JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>شرارة الأفكار</h3>
+                <p>منصة عربية تهدف إلى مشاركة المعرفة والخبرات في عالم البرمجة والتقنية.</p>
+            </div>
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="blog.html">المدونة</a></li>
+                    <li><a href="../about.html">من نحن</a></li>
+                    <li><a href="../contact.html">اتصل بنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="جيت هب"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 شرارة الأفكار. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- الأزرار العائمة -->
+    <div class="floating-buttons">
+        <button id="theme-toggle" class="floating-button" aria-label="تبديل الوضع المظلم">
+            <i class="fas fa-moon"></i>
+        </button>
+        <a href="#" id="back-to-top" class="floating-button" aria-label="العودة للأعلى">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <!-- السكريبتات -->
+    <script src="../js/blog.js"></script>
+    <script>
+        // تبديل القائمة في الأجهزة المحمولة
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // زر العودة للأعلى
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // تبديل الوضع المظلم
+        const themeToggle = document.getElementById('theme-toggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        
+        // التحقق من تفضيلات النظام
+        if (prefersDarkScheme.matches) {
+            document.body.classList.add('dark-theme');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        // تبديل الوضع يدويًا
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            const isDark = document.body.classList.contains('dark-theme');
+            themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+
+        // الحفاظ على تفضيلات المستخدم
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else if (currentTheme === 'light') {
+            document.body.classList.remove('dark-theme');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+    </script>
+</body>
+</html>
